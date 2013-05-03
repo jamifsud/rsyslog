@@ -27,6 +27,6 @@ action :create do
       'tag' => new_resource.name,
       'severity' => new_resource.severity,
       'facility' => new_resource.facility
-    notifies :restart, "resources[rsyslog]"
+    notifies :restart, "service[rsyslog]"
   end
 end
